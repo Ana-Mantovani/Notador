@@ -1,0 +1,36 @@
+@import '../../App.css';
+
+/*  CREATE PROJECT  */
+.contentCreate {
+  margin: 0px;
+}
+.create {  
+  display: flex;
+
+  width: 100vw;
+  height: 80vh;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 600px;
+  height: 400px;
+
+  background-color: var(--Secondary-background);
+
+  border-radius: 20px;
+
+  padding: 30;
+}
+
+/*
+
+.crecreateTitle
+.projectName
+.projectType
+.buttons
+
+*/
+
