@@ -24,12 +24,8 @@ function CreateProject(){
           </div>
 
           <div className="buttons">
-            <div className="buttonContent">
-              Cancela
-            </div>
-            <div className="buttonContent">
-              Confirma
-            </div>
+            <input type="button" value="Confirma" />
+            <input type="button" value="Cancela" />
           </div>
         </div>
       </div>
