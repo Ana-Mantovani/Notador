@@ -140,19 +140,6 @@ h1, h3, input, label {
   justify-content: space-between;
 }
 
-.buttonContent {
-  display: flex;
-  width: 150px;
-  height: 50px;
-
-  padding: 15px;
-
-  border: 1px solid var(--Secondary-button);
-  border-radius: 20px;
-
-  justify-content: center;
-  align-items: center;
-}
 
 /*
 

@@ -1,2 +1,74 @@
 @import '../../App.css';
 
+.buttonContent {
+  display: flex;
+  width: 175px;
+  height: 50px;
+
+  margin: 15px;
+
+  border: 1px solid var(--Secondary-button);
+  border-radius: 20px;
+
+  font-size: 25px;
+  font-weight: bold;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.redButton, .yellowButton {
+  background-color: var(--Primary-button);
+  color: var(--Primary-background);
+}
+
+.redButton:hover {
+  background-color: var(--Primary-Red-button);
+  color: var(--Primary-background);
+
+  transform: translateY(-2px);    
+  box-shadow: 0 5px 10px var(--Tertiary-background);
+}
+
+.redButton:active {
+  background-color: var(--Secondary-Red-button);
+  color: var(--Primary-color);
+
+  transform: translateY(-1px);
+}
+
+.yellowButton:hover {
+  background-color: var(--Primary-Yellow-button);
+  color: var(--Primary-background);
+
+  transform: translateY(-2px);    
+  box-shadow: 0 5px 10px var(--Tertiary-background);
+}
+
+.yellowButton:active {
+  background-color: var(--Secondary-Yellow-button);
+  color: var(--Primary-color);
+
+  transform: translateY(-1px);
+}
+
+.greenButton {
+  background-color: var(--Secondary-button);
+  color: var(--Primary-background);
+}
+
+.greenButton:hover {
+  background-color: var(--Primary-Green-button);
+  color: var(--Primary-background);
+
+  transform: translateY(-2px);    
+  box-shadow: 0 5px 10px var(--Tertiary-background);
+}
+
+.greenButton:active {
+  background-color: var(--Secondary-Green-button);
+  color: var(--Primary-color);
+
+  transform: translateY(-1px);
+}
+

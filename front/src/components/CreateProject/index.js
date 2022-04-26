@@ -1,3 +1,5 @@
+import { GreenButton } from '../Buttons/GreenButton';
+import { RedButton } from '../Buttons/RedButton';
 import './style.css';
 
 function CreateProject(){
@@ -24,12 +26,8 @@ function CreateProject(){
           </div>
 
           <div className="buttons">
-            <div className="buttonContent">
-              Cancela
-            </div>
-            <div className="buttonContent">
-              Confirma
-            </div>
+            <GreenButton />
+            <RedButton />
           </div>
         </div>
       </div>
