@@ -1,5 +1,6 @@
 :root{
   /*  Blue  */
+  --Low-Priority: rgba(77, 90, 227, 1);
 
   /*  Dark  */
   --Primary-background: rgba(18, 18, 18, 1);
@@ -18,13 +19,16 @@
   /*  Red  */
   --Primary-Red-button: rgba(255, 25, 25, 1);
   --Secondary-Red-button: rgba(255, 0, 0, 0.5);
+  --High-Priority: rgba(255, 0, 0, 1);
 
   /*  White  */
   --Primary-color: rgba(255, 255, 255, 1);
+  --No-Priority: rgba(255, 255, 255, 1);
 
   /*  Yellow  */
   --Primary-Yellow-button:rgba(255, 255, 0, 1);
   --Secondary-Yellow-button: rgba(255, 255, 0, 0.4);
+  --Medium-Priority: rgba(224, 194, 83, 1)
 
 }
 

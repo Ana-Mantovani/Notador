@@ -94,7 +94,7 @@ h1, h3, input, label {
 
   padding: 15px;
 
-  flex-direction: row;   
+  flex-direction: column;   
   justify-content: space-between;
 }
 
@@ -138,6 +138,22 @@ h1, h3, input, label {
 
   flex-direction: row;
   justify-content: space-between;
+}
+
+.redPriority {
+  border: 3px solid var(--High-Priority);
+}
+
+.yellowPriority {
+  border: 3px solid var(--Medium-Priority);
+}
+
+.bluePriority {
+  border: 2px solid var(--Low-Priority);
+}
+
+.whitePriority {
+  border: 2px solid var(--No-Priority);
 }
 
 
