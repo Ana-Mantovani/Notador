@@ -9,9 +9,8 @@ export function Kanban(){
     <div className="content">
       <Header />
       <div className="contentBody">
-        <CreateProject />
+        body
       </div>
     </div>
   );
 }
-

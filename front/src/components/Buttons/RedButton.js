@@ -8,7 +8,7 @@ export function RedButton(){
   }
 
   return (
-    <div className="buttonContent redButton" onClick={ goBack } >
+    <div className="buttonContent redButton" onClick={ ()=>{} } >
       Cancela
     </div>
   );

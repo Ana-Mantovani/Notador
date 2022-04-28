@@ -1,24 +1,93 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from "react";
+import { CSSTransition } from 'react-transition-group';
+
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 import './style.css';
-import CreateProject from './../CreateProject/index';
+import CreateProject from '../CreateProject/index';
 
 
 function Header(){
   return (
-    <div className="contentHeader">
+    <Navbar>
+      <NavItem icon={ <Icon icon={solid('folder')} size="3x" /> }>
+        <DropdownMenu />
+      </NavItem>
+      <NavItem icon={ <Icon icon={solid('square-plus')} size="3x" /> }>
+        <CreateProject />
+      </NavItem>
+    </Navbar>
+ );
+}
+
+function Navbar(props){
+  return( 
+    <nav className="contentHeader">
       <ul className="menu">
-        <li className="folder" onClick={ () => {} }>
-          <Icon icon={solid('folder')} size="3x" />
-        </li>
-        <li className="plus" onClick={ <CreateProject /> } >
-          <Icon icon={solid('square-plus')} size="3x" />
-        </li>
+        {props.children} 
       </ul>
-    </div>
+    </nav>
   );
 }
+
+function NavItem(props){
+  const [open, setOpen] = useState(false);
+
+  return( 
+    <nav className="nav-item">
+      <a href="#" className="iconButton" onClick={ ()=> setOpen(!open) }>
+        {props.icon} 
+      </a>
+
+      {open && props.children}
+    </nav>
+  );
+}
+
+function DropdownMenu(){
+  const [activeMenu, setActiveMenu] = useState('main');        //settings, animals
+  const [menuHeight, setMenuHeight] = useState(null);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
+  });
+
+  function calcHeight(element){
+    const height = element.offsetHeight;
+
+    setMenuHeight(height);
+  }
+
+  function DropdownItem(props){
+    return(
+      <a 
+        className="menuItem" 
+        onClick={ ()=> props.goToMenu && setActiveMenu(props.goToMenu)}
+      >
+        {props.children} 
+      </a>
+    );
+  }
+
+  return( 
+    <div className="dropdown" style={{ height: menuHeight }} ref={ dropdownRef }>
+      <CSSTransition 
+        in={activeMenu === 'main'} 
+        unmountOnExit 
+        timeout={ 500 } 
+        classNames="menu-primary" 
+        onEnter={ calcHeight }
+      >
+        <div className="menuDrop">
+          <DropdownItem > Novo Projeto </DropdownItem>
+          <DropdownItem goTo="list" > Kanban </DropdownItem>
+          <DropdownItem goTo="list" > Lista </DropdownItem>
+        </div>
+      </CSSTransition>
+    </div>
+  );
+} 
 
 export default Header;

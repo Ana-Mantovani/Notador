@@ -6,7 +6,7 @@
   --Primary-background: rgba(18, 18, 18, 1);
   --Secondary-background: rgba(43, 43, 43, 1);
   --Tertiary-background: rgba(69, 69, 69, 1);
-  --Quaternary-background: '';
+  --Quaternary-background: rgba(71, 74, 77, 1);
 
   /*  Green  */
   --Primary-Green-button:rgba(0, 255, 72, 1);

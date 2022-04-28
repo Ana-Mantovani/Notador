@@ -1,19 +1,24 @@
 @import '../../App.css';
 
 /*  HEADER  */
+.contentHeader, .menu, .iconButton, .iconButton svg, nav, ul, li, a {
+  background-color: var(--Secondary-background);
+}
+
 .contentHeader {
   padding: 0;
   margin: 0; 
 
   height: 75px;
-
-  background-color: var(--Secondary-background);
+  border-bottom-color:var(--Quaternary-background);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
 .menu {
   display: flex;
 
-  padding: 13.5px 0;
+  padding: 13px 0;
   margin: 0;
 
   margin-left: 10%;
@@ -22,11 +27,50 @@
   justify-content: space-between;
 
   list-style: none;
-  background-color: var(--Secondary-background);
 }
 
-.folder svg, .plus svg {
-  background-color: var(--Secondary-background);
+.dropdown {
+  position: absolute;
 
+  top: 75px;
+  width: 300px;
+
+  margin-left: 100px;
+
+  border: 1px solid var(--Quaternary-background);
+  border-top-color: var(--Secondary-background);
+  border-radius: 0 0 20px 20px;
   
+  overflow: hidden;
+
+  transform: translateX(-45%);
+  transition: height var(--speed) ease;
+}
+
+.menuItem {
+  display: flex;
+
+  height: 50px;
+  padding: 20px;
+
+  align-items: center;
+
+  transition: background var(--speed);
+}
+
+.menuItem .iconButton {
+  margin-left: 8px;
+}
+
+
+.menuItem .iconButton:hover {
+  filter: none;
+}
+
+.menuItem:hover {
+  background-color: #525357;
+}
+
+.icon-right {
+  margin-right: auto;
 }
