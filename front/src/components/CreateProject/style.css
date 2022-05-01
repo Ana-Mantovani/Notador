@@ -13,9 +13,13 @@ label {
   font-size: 20px;
 }
 
-.box, .contentBox, .createTitle, .contentInputs, .projectName, .projectType, .radioType, .radioType, .buttons, 
-h1, h3, input, label {
+.box, .contentBox, .createTitle, .contentInputs, .projectName, .projectType, .radioType, .buttons, 
+h1, h3, .projectType input, .projectType label {
   background-color: var(--Secondary-background);
+}
+
+fieldset {
+  border: 0;
 }
 
 .box {

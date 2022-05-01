@@ -53,6 +53,8 @@
   height: 50px;
   padding: 20px;
 
+  text-decoration: none;
+
   align-items: center;
 
   transition: background var(--speed);
@@ -74,3 +76,4 @@
 .icon-right {
   margin-right: auto;
 }
+

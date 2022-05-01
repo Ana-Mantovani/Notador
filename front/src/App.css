@@ -13,8 +13,9 @@
   --Secondary-Green-button: rgba(0, 255, 72, 0.5);
 
   /*  Grey  */
-  --Primary-button:rgba(171, 171, 171, 1);
-  --Secondary-button: rgba(222, 222, 222, 1);
+  --Primary-button: rgba(94, 94, 94, 1);
+  --Secondary-button: rgba(171, 171, 171, 1);
+  --Tertiary-button: rgba(222, 222, 222, 1);
 
   /*  Red  */
   --Primary-Red-button: rgba(255, 25, 25, 1);

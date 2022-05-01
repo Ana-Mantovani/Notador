@@ -1,0 +1,145 @@
+@import '../../App.css';
+
+.inputsCheck-white, .inputsCheck-white input, .inputsCheck-white label,
+.inputsCheck-blue, .inputsCheck-blue input, .inputsCheck-blue label,
+.inputsCheck-yellow, .inputsCheck-yellow input, .inputsCheck-yellow label,
+.inputsCheck-red, .inputsCheck-red input, .inputsCheck-red label {
+  background-color: var(--Primary-button);
+
+  font-size: 18px;
+  font-weight: normal;
+  font: 'Roboto';
+}
+
+.inputsCheck-white, 
+.inputsCheck-blue, 
+.inputsCheck-yellow, 
+.inputsCheck-red {
+  margin: 15px 0;
+}
+
+.inputsCheck-white input,
+.inputsCheck-blue input,
+.inputsCheck-yellow input,
+.inputsCheck-red input {
+  display: none;
+
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.inputsCheck-white input + label:before {
+  display: inline-block;
+
+  content: '';
+
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  vertical-align: middle; 
+
+  background-color: var(--Tertiary-background);
+
+  border: 2px solid var(--Primary-color);
+}
+
+.inputsCheck-white input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  border: 2px solid var(--Primary-color);
+}
+
+.inputsCheck-blue input + label:before {
+  display: inline-block;
+
+  content: '';
+
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  vertical-align: middle; 
+
+  background-color: var(--Tertiary-background);
+
+  border: 2px solid var(--Low-Priority);
+}
+
+.inputsCheck-blue input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  border: 2px solid var(--Low-Priority);
+}
+
+.inputsCheck-yellow input + label:before {
+  display: inline-block;
+
+  content: '';
+
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  vertical-align: middle; 
+
+  background-color: var(--Tertiary-background);
+  
+  border: 2px solid var(--Medium-Priority);
+}
+
+.inputsCheck-yellow input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  border: 2px solid var(--Medium-Priority);
+}
+
+.inputsCheck-red input + label:before {
+  display: inline-block;
+
+  content: '';
+
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  vertical-align: middle; 
+
+  background-color: var(--Tertiary-background);
+  
+  border: 2px solid var(--High-Priority);
+}
+
+.inputsCheck-red input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+
+  margin: 0 10px;
+  padding: 1px;
+
+  border: 2px solid var(--High-Priority);
+}

@@ -31,11 +31,147 @@
 
 /*  BODY  */
 .contentBody {
-  margin-top: 80px;
+  margin-top: 80px; 
   margin-left: 5%;
 
   height: 80%;
   width: 90%;
-  
+
+  display: grid;
+  grid-auto-flow: column;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+
+  /*  Scrollbar aceito no (Firefox)   */
+  scrollbar-color: var(--Secondary-background) var(--Tertiary-background);   /*  Thumb Track  */
 }
 
+/*  webkit-scrollbar aceito no (Chrome, Edge, Opera, Safari)   */
+.contentBody::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--Secondary-background);
+}
+
+.contentBody::-webkit-scrollbar {
+  border-radius: 20px;
+  background-color: var(--Tertiary-background); 
+}
+
+/*  KANBAN  */
+
+.backlog, .specification, .implementation, .codeReview, .body, .leftSide, .rightSide, .itens, .list,
+.backlog h3, .specification h3, .implementation h3, .codeReview h3, .list h3,
+h4 {
+  background-color: var(--Primary-button);
+}
+
+.backlog h3, .specification h3, .implementation h3, .codeReview h3 {
+  font-size: 30px;
+
+  margin-top: 15px;
+
+  text-align: center;
+}
+
+.backlog, .specification, .implementation, .codeReview, .list  {
+  border-radius: 20px;
+  
+  margin: 0 10px 30px 30px;
+  padding: 30px;
+}
+
+.backlog {
+  width: 350px;
+  height: 700px;
+}
+
+.list {
+  height: 700px;
+}
+
+.specification, .implementation, .codeReview {
+  width: 770px;
+  height: 700px;  
+}
+
+.body {
+  display: flex;
+  
+  margin-top: 30px;
+
+  justify-content: center;
+}
+
+.middleSide {
+  background-color: var(--Secondary-background);
+
+  width: 5px;
+  height: 539px;
+  
+  left: 382px;
+  top: 136px;
+}
+
+.leftSide, .rightSide {
+  width: 340px;
+}
+
+.rightSide {
+  margin-left: 30px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+h4 {
+  display: flex;
+
+  font-size: 20px;
+  margin-bottom: 10px;
+
+  justify-content: center;
+}
+
+.backlog .itens{
+  height: 550px;
+}
+
+.itens {
+
+  height: 500px;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  scrollbar-width: 2px;
+
+  /*  Scrollbar aceito no (Firefox)   */
+  scrollbar-color: var(--Secondary-background) var(--Tertiary-background);   /*  Thumb Track  */
+}
+
+.itens::-webkit-scrollbar {
+  width: 8px;
+
+  margin-inline: 5px;
+  
+  border-radius: 20px;
+  background-color: var(--Tertiary-background); 
+}
+
+.itens::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--Secondary-background);
+}
+
+.list h3 {
+  font-size: 30px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.list .itens{
+  margin: 50px;           /* topo | direita | inferior | esquerda */
+  height: 500px;
+}

@@ -63,6 +63,7 @@ function DropdownMenu(){
   function DropdownItem(props){
     return(
       <a 
+        href="#"
         className="menuItem" 
         onClick={ ()=> props.goToMenu && setActiveMenu(props.goToMenu)}
       >
