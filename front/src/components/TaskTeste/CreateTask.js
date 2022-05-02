@@ -4,7 +4,7 @@ import './createTask.css';
 
 function CreateTask(){
   return (
-    <div className="box">
+    <div className="boxTask">
       <div className="contentBox">
         <h1 className="createTitle"> Nova Tarefa </h1>
 

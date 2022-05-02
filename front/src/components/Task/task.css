@@ -1,11 +1,10 @@
 @import '../../App.css';
 
-/*  CREATE PROJECT  */
 * {
   font-family: 'Roboto', sans-serif;
 }
 
-h3 {
+.divName h3, .divPriority h3, .divDescription h3 {
   font-size: 25px;
 }
 
@@ -13,8 +12,11 @@ label {
   font-size: 20px;
 }
 
-.box, .contentBox, .createTitle, .contentInputs, .projectName, .projectType, .radioType, .radioType, .buttons, 
-h1, h3, input, label {
+.box, .contentBox, .fieldsetClass, .divName, .divPriority, .divDescription, .fieldsetButton,
+.divName h3, .divPriority h3, .divDescription h3,
+.divName input, .divPriority input, .divDescription input, 
+.divPriority label,
+h1, h3 {
   background-color: var(--Secondary-background);
 }
 
@@ -28,18 +30,21 @@ h1, h3, input, label {
   transform: translate(-50%, -50%);
 
   width: 600px;
-  height: 500px;
+  height: 600px;
 
   border-radius: 20px;
 
   padding: 30px;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .contentBox {
   display: flex;
 
   width: 540px;
-  height: 440px;
+  height: 540px;
 
   padding: 15px 0;
 
@@ -51,58 +56,58 @@ h1, h3, input, label {
   align-items: center;
 }
 
-.createTitle {
-  display: flex;
+
+.fieldsetClass {
+	display: flex;
 
   flex-direction: column;   
   text-align: center;
-
-  font-size: 35px;
+	justify-content: space-between;
 }
 
-.projectName {
+.divName, .divDescription {
   display: flex;
 
   flex-direction: row;
+  
+  justify-content: space-between;
 }
 
-.projectName input[type='text']{
+.divName input[type='text'], .divDescription input[type='text'] {
   width: 250px;
   height: 30px;
+
   border-radius: 20px;
 
-  margin: 0 10px;
+  margin-top: 18px;
+  padding-left: 5px;
+
 
   background-color: var(--Tertiary-background);
 }
 
-.contentInputs {
+.divPriority {
   display: flex;
 
   margin-top: 10px;
   padding: 15px 0;
 
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.priorityList {
+  display: flex;
+
   flex-direction: column;
   justify-content: space-between;
 }
 
-.projectType {
-  display: flex;
-
-  padding: 15px;
-
-  flex-direction: column;   
-  justify-content: space-between;
-}
-
-.projectType input {
+.priorityList input {
   display: none;
-
-  margin-left: 10px;
-  padding-left: 10px;
 }
 
-.projectType input + label:before {
+.divPriority input + label:before {
   display: inline-block;
 
   content: '';
@@ -120,7 +125,7 @@ h1, h3, input, label {
   background-color: var(--Tertiary-background);
 }
 
-.projectType input:checked + label:before {
+.divPriority input:checked + label:before {
   background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
   background-position: center;
 
@@ -137,40 +142,23 @@ h1, h3, input, label {
   justify-content: space-between;
 }
 
-.redPriority {
-  border: 3px solid var(--High-Priority);
-}
-
-.yellowPriority {
-  border: 3px solid var(--Medium-Priority);
-}
-
-.bluePriority {
-  border: 2px solid var(--Low-Priority);
-}
-
-.whitePriority {
-  border: 2px solid var(--No-Priority);
-}
-
-
 /*
 
-.contentCreate            (div)
-  .box                    (div)
-    .contentBox           (div)
-      .createTitle     (h1) 
-      .contentInputs
-        .projectName      (h3)
-          input
-        .projectType      (h3)
-          .radioType      (input radio)
-          label           (label)
-          
-          .radioType      (input radio)      
-          label           (label)
-      .buttons
-        input button
-        input button
-
+.box
+	.contentBox
+		h1
+		.fieldsetClass
+			.divName
+				label
+				input
+			.divPriority
+				#highPriority
+				#mediumPriority
+				#lowPriority
+				#noPriority
+			.divDescription
+				label
+				input
+		.fieldsetButton
+		
 */

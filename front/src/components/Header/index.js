@@ -1,22 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
-
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 import './style.css';
-import CreateProject from '../CreateProject/index';
-
+import CreateProject from '../Project/index';
 
 function Header(){
+  const [openPlus, setOpenPlus] = useState(false);
+
   return (
     <Navbar>
       <NavItem icon={ <Icon icon={solid('folder')} size="3x" /> }>
         <DropdownMenu />
       </NavItem>
-      <NavItem icon={ <Icon icon={solid('square-plus')} size="3x" /> }>
-        <CreateProject />
-      </NavItem>
+      
+        
+        <button className="iconButton" onClick={ ()=> setOpenPlus(!openPlus) }>
+          <Icon icon={solid('square-plus')} size="4x" />
+        </button>
+        {openPlus ? (
+          <CreateProject onClose={ ()=> setOpenPlus(!openPlus) } />
+        ): null}
+      
     </Navbar>
  );
 }
@@ -46,6 +53,7 @@ function NavItem(props){
 }
 
 function DropdownMenu(){
+  const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState('main');        //settings, animals
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
@@ -65,11 +73,19 @@ function DropdownMenu(){
       <a 
         href="#"
         className="menuItem" 
-        onClick={ ()=> props.goToMenu && setActiveMenu(props.goToMenu)}
+        onClick={ ()=> props.goToMenu && setActiveMenu(props.goToMenu) }
       >
         {props.children} 
       </a>
     );
+  }
+
+  function goToList(){
+    navigate("/list");
+  }
+
+  function goToKanban(){
+    navigate("/kanban");
   }
 
   return( 
@@ -83,8 +99,8 @@ function DropdownMenu(){
       >
         <div className="menuDrop">
           <DropdownItem > Novo Projeto </DropdownItem>
-          <DropdownItem goTo="list" > Kanban </DropdownItem>
-          <DropdownItem goTo="list" > Lista </DropdownItem>
+          <a onClick={goToList} className="menuItem" >Lista</a>
+          <a onClick={goToKanban} className="menuItem" >Kanban</a>
         </div>
       </CSSTransition>
     </div>
@@ -92,3 +108,14 @@ function DropdownMenu(){
 } 
 
 export default Header;
+
+
+/*
+
+      <NavItem icon={ <Icon icon={solid('square-plus')} size="3x" /> }>
+        {openPlus ? (
+          <CreateProject onClose={ ()=> setOpenPlus(!openPlus) } />
+        ): null}
+      </NavItem>
+
+*/

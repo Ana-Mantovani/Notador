@@ -5,6 +5,10 @@
   background-color: var(--Secondary-background);
 }
 
+.iconButton {
+  border-style: none;
+}
+
 .contentHeader {
   padding: 0;
   margin: 0; 
@@ -18,7 +22,7 @@
 .menu {
   display: flex;
 
-  padding: 13px 0;
+  padding: 13px 0 0 0;
   margin: 0;
 
   margin-left: 10%;
@@ -77,3 +81,6 @@
   margin-right: auto;
 }
 
+a{
+  cursor: pointer;
+}

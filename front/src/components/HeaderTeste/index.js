@@ -3,7 +3,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 import './style.css';
-import CreateProject from '../CreateProject/index';
+import CreateProject from '../ProjectTeste/index';
 
 
 function Header(){

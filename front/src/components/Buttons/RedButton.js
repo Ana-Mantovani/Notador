@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './style.css';
 
 export function RedButton(){
-  const [open, setOpen] = useState(true);
-
-  function goBack(){
-    window.history.back();
-  }
-
   return (
-    <div className="buttonContent redButton"  onClick={ ()=> setOpen(!open) } >
+    <div className="buttonContent redButton" >
       Cancela
     </div>
+    
   );
 }
