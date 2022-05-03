@@ -4,8 +4,8 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 import CheckboxItem from '../CheckboxItem/index';
-import './style.css';
-import CreateTask from './../TaskTeste/CreateTask';
+import './item.css';
+import CreateTask from '../Task';
 
 function ItemList(){
   const [open, setOpen] = useState(false);

@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
-import './style.css';
-import CreateProject from '../ProjectTeste/index';
+import './headerT.css';
+import CreateProject from '../TesteProject/index';
 
 
 function Header(){

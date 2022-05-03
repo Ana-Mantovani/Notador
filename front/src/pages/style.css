@@ -20,11 +20,13 @@
   align-items: center;          /*  centraliza horizontal  */
 }
 
-.icon {
+.iconLoading {
   position: absolute;
 
   top: 50%;
   left: 50%;
+
+  background-color: var(--Primary-background);
   
   transform: translate(-50%, -50%);
 }
@@ -86,11 +88,28 @@ h4 {
   height: 700px;
 }
 
-.list {  
-  height: 700px;
+.contentBodyList{
+  position: absolute;
+  
+  top: 40%;
+  left: 50%;
+  
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  width: 750px;
+  height: 500px;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  justify-content: center;
+  align-items: center;
 }
 
-.contentBody.list{
+/*
+.contentBodyList.list{
   position: absolute;
   
   top: 50%;
@@ -109,6 +128,7 @@ h4 {
   justify-content: center;
   align-items: center;
 }
+*/
 
 .specification, .implementation, .codeReview {
   width: 770px;

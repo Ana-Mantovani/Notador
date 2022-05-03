@@ -1,6 +1,6 @@
 import { GreenButton } from '../Buttons/GreenButton';
 import { RedButton } from '../Buttons/RedButton';
-import './style.css';
+import './projectT.css';
 
 function CreateProject(){
   return (

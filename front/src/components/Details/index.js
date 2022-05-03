@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../../services/api'
 
-import './task.css';
+import './details.css';
 
-const CreateTask = ({ onClose = ()=> {} }) => {
+const Details = ({ onClose = ()=> {} }) => {
   const navigate = useNavigate();
   
   const [formData, setFormData] = useState({
@@ -31,6 +31,22 @@ const CreateTask = ({ onClose = ()=> {} }) => {
     setFormData({ ...formData, [description]: value });
   }
 
+  function handleDelete(event){
+    event.preventDefault();
+
+    const { name, priority, description } = formData;
+
+    const data = {
+      name, 
+      priority, 
+      description
+    };
+
+    api.post('', data);   // falta caminho post
+    
+    navigate('/list');    //falta caminho que vai
+  }
+
   async function handleSubmit(event){
     event.preventDefault();
 
@@ -48,9 +64,10 @@ const CreateTask = ({ onClose = ()=> {} }) => {
   };
 
   return (
-    <div className="box">
+    <div className="boxDetails">
       <form onSubmit={handleSubmit} className="contentBox">
-        <h1>Nova Tarefa</h1>
+        <h1>Atualizar Tarefa</h1>
+
         <fieldset className="fieldsetClass">
           <div className="divName">
             <h3>Nome:</h3>
@@ -105,8 +122,8 @@ const CreateTask = ({ onClose = ()=> {} }) => {
         </fieldset>
 
         <fieldset className="fieldsetButton">
-          <button type="submit" className='buttonContent greenButton'>
-            Confirma
+          <button type="submit" className='buttonContent yellowButton'>
+            Atualizar
           </button>
 
           <button className='buttonContent redButton' onClick={ onClose }>
@@ -118,4 +135,4 @@ const CreateTask = ({ onClose = ()=> {} }) => {
   );
 }
 
-export default CreateTask;
+export default Details;

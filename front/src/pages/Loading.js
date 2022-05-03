@@ -8,7 +8,7 @@ export function Loading(){
   return(
     <div className="contentLoading">
       <div className="contentIcon">
-        <Icon className='icon' icon={solid('spinner')} size="10x" spin />
+        <Icon className='iconLoading' icon={solid('spinner')} size="10x" spin />
       </div>
     </div>
   );

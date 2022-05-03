@@ -143,3 +143,10 @@
 
   border: 2px solid var(--High-Priority);
 }
+
+.iconInfo {
+  background-color: var(--Primary-button);
+
+  margin-left: 25px;
+  border-style: none;
+}

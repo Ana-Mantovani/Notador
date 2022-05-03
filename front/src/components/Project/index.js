@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from '../../services/api'
 
-import './style.css';
+import './project.css';
 
 
 const CreateProject = ({ onClose = ()=> {} }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './style.css';
+import './buttonT.css';
 
 export function YellowButton(){
   return (

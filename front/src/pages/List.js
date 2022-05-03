@@ -8,7 +8,7 @@ export function List(){
   return (
     <div className="content">
       <Header />
-      <div className="contentBody">
+      <div className="contentBodyList">
         <div className="list">
           <h3> Lista </h3>
           <ItemList />

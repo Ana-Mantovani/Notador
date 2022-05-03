@@ -1,27 +1,26 @@
 @import '../../App.css';
+@import '../TesteButtons/buttonT.css';
 
+/*	FONTES	*/
 * {
   font-family: 'Roboto', sans-serif;
 }
 
-.divName h3, .divPriority h3, .divDescription h3 {
-  font-size: 25px;
+h1 {
+  font-size: 35px;
 }
 
 label {
   font-size: 20px;
 }
 
-.box, .contentBox, .fieldsetClass, .divName, .divPriority, .divDescription, .fieldsetButton,
-.divName h3, .divPriority h3, .divDescription h3,
-.divName input, .divPriority input, .divDescription input, 
-.divPriority label,
-h1, h3 {
+.box, .contentBox, .fieldset, .divName, .divType, .fieldsetButton,
+h1, label, input {
   background-color: var(--Secondary-background);
 }
 
 .box {
-  position: absolute;
+	position: absolute;
   
   top: 50%;
   left: 50%;
@@ -30,7 +29,7 @@ h1, h3 {
   transform: translate(-50%, -50%);
 
   width: 600px;
-  height: 700px;
+  height: 500px;
 
   border-radius: 20px;
 
@@ -44,7 +43,7 @@ h1, h3 {
   display: flex;
 
   width: 540px;
-  height: 640px;
+  height: 440px;
 
   padding: 15px 0;
 
@@ -56,12 +55,7 @@ h1, h3 {
   align-items: center;
 }
 
-fieldset {
-  border: none;
-}
-
-
-.fieldsetClass {
+.fieldset	{
 	display: flex;
 
   flex-direction: column;   
@@ -69,49 +63,39 @@ fieldset {
 	justify-content: space-between;
 }
 
-.divName, .divDescription {
+.divName {
   display: flex;
 
   flex-direction: row;
-  
-  justify-content: space-between;
 }
 
-.divName input[type='text'], .divDescription input[type='text'] {
+.divName input[type='text']{
   width: 250px;
   height: 30px;
-
   border-radius: 20px;
 
-  margin-top: 18px;
-  padding-left: 5px;
-
+  margin: 0 10px;
 
   background-color: var(--Tertiary-background);
 }
 
-.divPriority {
+.divType {
   display: flex;
 
-  margin-top: 10px;
-  padding: 15px 0;
+  padding: 15px;
 
-  flex-direction: row;
+  flex-direction: row;   
   justify-content: space-between;
 }
 
-.priorityList {
-  display: flex;
-
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.priorityList input {
+.divType input {
   display: none;
+
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
-.divPriority input + label:before {
+.divType input + label:before {
   display: inline-block;
 
   content: '';
@@ -121,52 +105,51 @@ fieldset {
   border-radius: 4px;
   border: 2px solid var(--Primary-color);
 
-  text-align: left;
-
-  margin: 0 50px 5px;
-  padding: 2px;
+  margin: 0 10px;
+  padding: 1px;
 
   vertical-align: middle; 
 
   background-color: var(--Tertiary-background);
 }
 
-.divPriority input:checked + label:before {
+.divType input:checked + label:before {
   background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
   background-position: center;
 
   border: 2px solid var(--Primary-color);
 
-  text-align: left;
-
-  margin: 0 50px 5px;
-  padding: 2px;
+  margin: 0 10px;
+  padding: 1px;
 }
 
-.buttons {
+.fieldsetButton {
   display: flex;
 
   flex-direction: row;
   justify-content: space-between;
 }
 
+input[type=text] {
+	padding: auto 15px;
+}
+
+
 /*
 
 .box
 	.contentBox
 		h1
-		.fieldsetClass
-			.divName
-				label
-				input
-			.divPriority
-				#highPriority
-				#mediumPriority
-				#lowPriority
-				#noPriority
-			.divDescription
-				label
-				input
-		.fieldsetButton
-		
+			.fieldset	
+				.divName
+				.divType
+					#listType
+						label
+					#KanbanType
+						label
+			.fieldsetButton
+				.buttonContent
+				.buttonContent
+
+  
 */
